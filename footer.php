@@ -14,10 +14,10 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			
 
-			<div class="site-info">
+			<div class="site-info-footer">
 				Created by chowmean</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
+		</footer>
+	</div>
 
 	<?php wp_footer(); ?>
 </body>

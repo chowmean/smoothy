@@ -3229,3 +3229,10 @@ font-size:36px;text-shadow:1px 1px 1px white;position:fixed;right:10%; bottom:10
 {color:#454545;
 background:#bbb;opacity:1;
 }
+
+.site-info-footer{
+margin: 0 auto;
+	bottom:0%;position:fixed;z-index:100;
+	padding: 2px 0;
+	width: 100%;background:#454545;color:#bbb;
+}
