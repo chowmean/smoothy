@@ -45,7 +45,11 @@ $(document).ready(function(){
 </head>
 
 
-<!-- modifeid-->
+
+
+
+
+<!-- modified-->
 <?php if(!isset($_GET["page_id"]))
 {?>
 <div id="front_page" class="front_page">
@@ -61,10 +65,36 @@ $(document).ready(function(){
 			</div>
 
 		<div id="enter" class="enter"><a href="#" class ="enter">Click to Go deeper</a></div>
+
+<div id="story" class="story"> <div id="content" class="site-content" role="main">
+		<?php if ( have_posts() ) : ?>
+
+			<?php  ?>
+			<?php if ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endif; ?>
+
+			
+
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
+
+		</div><!-- #content -->
+	</div>
+
+</div>
+
 		</div>
 
+
 <?php };?>
+
 <!-- modification ends here-->
+
+
+
+
 
 
 <body <?php body_class(); ?>>
