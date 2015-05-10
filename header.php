@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
 <!-- modified-->
-<?php if(!isset($_GET["page_id"]))
+<?php if(!isset($_GET["page_id"]) && !isset($_GET["p"]))
 {?>
 <div id="front_page" class="front_page">
 		<h1 class="site-title-front"><?php bloginfo( 'name' ); ?><h2 class="site-title-description"><?php bloginfo( 'description' ); ?></h2></h1>
@@ -64,14 +64,14 @@ $(document).ready(function(){
 				</nav><!-- #site-navigation -->
 			</div>
 
-		<div id="enter" class="enter"><a href="#" class ="enter">Click to Go deeper</a></div>
+		<div id="enter" class="enter"><a href="#" class ="enter">More Stories</a></div>
 
 <div id="story" class="story"> <div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php  ?>
 			<?php if ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php get_template_part( 'content', get_post_format() );echo "<font align='right'><center><i>Today's Story</i></center></font>";  ?>
 			<?php endif; ?>
 
 			

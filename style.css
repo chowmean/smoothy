@@ -3219,9 +3219,9 @@ font-size: 18px;
 .enter
 {
 
-padding:20px;
+padding:10px;
 color:#bbb;
-font-size:36px;text-shadow:1px 1px 1px white;position:fixed;right:10%; bottom:10%;font: 300 italic 24px "Source Sans Pro", Helvetica, sans-serif;border-radius:30px;
+font-size:24px;text-shadow:1px 1px 1px white;position:fixed;right:10%; bottom:5%;font: 300 italic 24px "Source Sans Pro", Helvetica, sans-serif;border-radius:30px;
 }
 
 
@@ -3241,8 +3241,9 @@ margin: 0 auto;
 {
 z-index:101;
 position:fixed;
-top:20%;
-left:40%;
-
+top:15%;
+right:5%;
+width:30%;
+background:#bbb;opacity:0.6;border-radius:30px;padding:30px;
 
 }
