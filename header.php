@@ -22,10 +22,34 @@
 <script>
 
 $(document).ready(function(){
+$("#minimize").hide();
     $("#enter").click(function(){
         $("#front_page").slideUp("slow");
     });
-   
+
+$("#maximize").click(function(){
+    $(".story").animate({
+    	
+    	left: "20%;",top:"10%",
+        width: "80%",
+    	height: "80%"
+  	},1000);
+    $("#maximize").hide();
+    $("#minimize").show();
+    });
+
+$("#minimize").click(function(){
+    $(".story").animate({
+    	
+    	right: "20%;",top:"15%",
+        width: "30%",
+    	height: "60%"
+  	},1000);
+    $("#minimize").hide();
+    $("#maximize").show();    
+	});
+    	
+
 });
 
 </script>
@@ -69,9 +93,9 @@ $(document).ready(function(){
 <div id="story" class="story"> <div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
-			<?php  ?>
+			<?php  ?><div align='right' style="background:black;width:100%;color:#bbb;border-radius:5px;"><center><i>Today's Story</i><br> </div></center><center><div id="maximize" >Expand</div><div id="minimize" >Contract</div></center>
 			<?php if ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() );echo "<font align='right'><center><i>Today's Story</i></center></font>";  ?>
+				<?php get_template_part( 'content', get_post_format() );  ?>
 			<?php endif; ?>
 
 			

@@ -3239,11 +3239,27 @@ margin: 0 auto;
 
 .story
 {
-z-index:101;
+z-index:10003;
 position:fixed;
 top:15%;
 right:5%;
 width:30%;
-background:#bbb;opacity:0.6;border-radius:30px;padding:30px;
+height:60%;
+overflow:hidden;border-radius:30px;
+background:#bbb;padding:30px;
+
+}
+
+#maximize{
+
+background-size:100% 100%;
+height:5%;width:20%;
+
+}
+
+#minimize{
+
+background-size:100% 100%;
+height:5%;width:20%;
 
 }
